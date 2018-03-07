@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmitUserForm(userForm)" #userForm="ngForm">
+  <div>
+    <label form="name">Name: </label>
+    <input type="text" name="name" required minlength="3">
+  </div>
+
+  <div>
+    <label form="email"> Email: </label>
+    <input type="email" name="email" required email>
+  </div>
+
+  <div>
+    <label form="password"> Password: </label>
+    <input type="password" name="password" minlength="6" required>
+  </div>
+
+  <div>
+    <label form="birthday"> Birthday: </label>
+    <input type="Date" name="birthday" required>
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid"> Create User</button>
+
+</form>
